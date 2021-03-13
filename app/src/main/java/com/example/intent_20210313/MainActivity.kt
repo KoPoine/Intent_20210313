@@ -79,7 +79,19 @@ class MainActivity : AppCompatActivity() {
             val myUri = Uri.parse("smsto:${phoneNum}")
             val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
 //            문자에 미리 적어줄 내용을 첨부
-            myIntent.putExtra("sms_body", "이 앱을 공유해주시면...")  //sms_body는 안드로이드에서 정해진 이름표를 사용해야 함 
+            myIntent.putExtra("sms_body", "이 앱을 공유해주시면...")  //sms_body는 안드로이드에서 정해진 이름표를 사용해야 함
+            startActivity(myIntent)
+        }
+
+        naverBtn.setOnClickListener {
+            val myUri = Uri.parse("https://naver.com") // 인터넷 주소 작성
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
+        kakaoStoreBtn.setOnClickListener {
+            val myUri = Uri.parse("market://details?id=com.kakao.talk") // 스토어 링크 상세 주소(편의상 카카오톡 링크 사용)
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
             startActivity(myIntent)
         }
 
