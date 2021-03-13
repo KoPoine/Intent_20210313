@@ -15,12 +15,14 @@
         android:text="새 닉네임 입력" />
 
     <EditText
+        android:id="@+id/nicknameEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="한/영 입력가능"
         android:singleLine="true" />
 
     <Button
+        android:id="@+id/okBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="확인" />
