@@ -12,25 +12,25 @@
         android:id="@+id/moveToFirstBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="다른 화면으로 이동"/>
+        android:text="다른 화면으로 이동" />
 
     <EditText
         android:id="@+id/messageEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="넘겨줄 문구를 입력"/>
+        android:hint="넘겨줄 문구를 입력" />
 
     <Button
         android:id="@+id/moveToSecondBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="다른 화면으로 문구 넘겨주기"/>
+        android:text="다른 화면으로 문구 넘겨주기" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="닉네임"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="닉네임" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,12 +42,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Poine"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/editNickBtn"
@@ -57,5 +57,23 @@
 
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="연락처" />
+
+    <EditText
+        android:id="@+id/phoneNumEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="휴대전화 번호 입력"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/dialBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화 걸기 (DIAL)" />
 
 </LinearLayout>
