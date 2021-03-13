@@ -1,5 +1,6 @@
 package com.example.intent_20210313
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -48,4 +49,26 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+//       이 함수가 실행된 이유 => 닉네임을 가지러 다녀온게 맞는지 => requestCode를 확인
+        if (requestCode == REQ_FOR_NICKNAME) {
+
+//            추가 질문 => OK 누른게 맞는지
+            if (resultCode == Activity.RESULT_OK) {
+
+//                첨부해준 데이터(data변수)를 받아서 TextView에 반영
+
+                val newNickname = data?.getStringExtra("nick")
+
+                nicknameTxt.text = newNickname
+
+            }
+
+        }
+
+    }
+
 }
